@@ -50,7 +50,7 @@ def criar_equipamento(request):
             form.save()
             print(nome_equipamento)
 
-        return  render(request, 'equipamentos.html',{'form': form,'table': table, "possuiSideBar": True, "html_content":html_nav })
+        return  render(request, 'equipamentos.html',{'form': form,'table': table, "possuiSideBar": True, "html_content":html_nav, "possuiVoltar": False })
     else:
         form = EquipamentoForm()
-        return  render(request, 'equipamentos.html',{'form': form,'table': table,  "possuiSideBar": True, "html_content":html_nav})
+        return  render(request, 'equipamentos.html',{'form': form,'table': table,  "possuiSideBar": True, "html_content":html_nav, "possuiVoltar": False})

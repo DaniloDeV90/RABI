@@ -4,13 +4,15 @@
 <form class="FormNav">
     <div class="FormNavDiv">
         <div class="menu1">
-            <h2>Cadastro de {{ name }}</h2>
+            <h2>{{ cadastro }}</h2>
+            {% if possuiVoltar %}
             <button class="returnBtn"> <i class='bx bx-arrow-back nav_icon'></i>VOLTAR</button>
+            {% endif %}
         </div>
         
         <div class="menu2">
-            <button class="btnForm">NOVO {{ name }}</button>
-            <button class="btnForm" > SALVAR</button>
+            <button class="btnForm ">NOVO {{ novo }} <i class='bx bx-plus nav_icon'></i></button>
+            <button class="btnForm" > SALVAR <i class='bx bx-check nav_icon' ></i></button>
         </div>
 
 

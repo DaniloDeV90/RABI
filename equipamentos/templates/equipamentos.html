@@ -1,15 +1,9 @@
 {% extends 'base.html' %}
-
 {% load static %}
 {% block body %}
     <header>
         <link rel="stylesheet" href=" {% static "equipamentos/equipamento.css" %}">
     </header>
-
-
-    {% include "static/components/Formulario.html" with name="equipamento" %}
-
-
-
+    {% include "static/components/Formulario.html" with cadastro="Cadastro de equipamento" novo="EQUIPAMENTO" %}
   {% include 'static/components/tabela.html' %}
 {% endblock %}
