@@ -1,0 +1,36 @@
+# Arquivos de ambiente local
+.env
+
+# Arquivos de banco de dados
+*.sqlite3
+
+# Arquivos de migração
+**/migrations/*.py
+**/migrations/*.pyc
+
+# Arquivos estáticos coletados
+staticfiles/
+
+# Diretório de mídia
+media/
+
+# Ambiente virtual
+venv/
+
+# Byte-compiled / arquivos compilados
+*.pyc
+__pycache__/
+
+# Arquivo de configuração IDE
+.vscode/
+
+# Arquivos de log
+*.log
+
+# Cache
+__pycache__
+*.pyc
+
+# Arquivos temporários
+*.swp
+*~

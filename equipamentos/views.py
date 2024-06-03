@@ -12,12 +12,7 @@ from .models import Equipamento
 
 
 
-def tabelaEquipamento(request):
-    queryset = Equipamento.objects.all()  # Obtenha o queryset de Equipamento
-    table = EquipamentoTable(queryset)  # Crie uma instância da tabela com o queryset
-    table.paginate(page=request.GET.get('page', 1), per_page=25)  # Paginar a tabela
 
-    return render(request, 'telateste.html', {'table': table})
 
 
 
@@ -25,8 +20,6 @@ def criar_equipamento(request):
     queryset = Equipamento.objects.all()
     table = EquipamentoTable(queryset)
     table.paginate(page=request.GET.get('page', 1), per_page=20)
-
-
 
     print (request.path)
 
@@ -38,7 +31,6 @@ def criar_equipamento(request):
             <a href="#" class="nav_link"> 
                <i class='bx bx-time  nav_icon'></i> <span class="nav_name">Grade Horária</span> 
             </a> 
-
         </div>
         """
 
