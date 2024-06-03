@@ -5,6 +5,12 @@ class EquipamentoForm(forms.ModelForm):
     class Meta:
         model = Equipamento
         fields = ['nome']
+        widgets = {
+
+            'nome': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Nome do Equipamento'}),
+
+        }
+
 
     def clean_nome(self):
         nome = self.cleaned_data.get('nome')

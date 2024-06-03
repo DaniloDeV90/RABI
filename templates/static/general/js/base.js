@@ -6,9 +6,16 @@ nav = document.getElementById(navId),
 bodypd = document.getElementById(bodyId),
 headerpd = document.getElementById(headerId)
 
+    const formNavDiv = document.querySelector(".FormNavDiv")
 
 if(toggle && nav && bodypd && headerpd){
 toggle.addEventListener('click', ()=>{
+
+    const  left = window.getComputedStyle(formNavDiv).getPropertyValue('left')
+
+
+
+ left  === "100px"?  formNavDiv.style.left = "240px" :   formNavDiv.style.left = "100px"
 
 nav.classList.toggle('show')
 
@@ -44,7 +51,8 @@ $(document).ready(function () {
 
     $('#example').DataTable({
         layout: {
-            topStart: 'buttons'
+            topStart: 'buttons',
+               top2Start: 'pageLength'
         },
                 buttons: [
                     {extend: 'copy', className: 'copyButton', text: "<img width=\"30\" height=\"30\" src=\"https://img.icons8.com/ios/50/copy--v1.png\" alt=\"copy--v1\"/>", title: "copiar"},
@@ -53,7 +61,9 @@ $(document).ready(function () {
                             "</svg>", title: "exportar Excel"},
                     {extend: 'pdf', className: 'pdfButton', text: "<img width=\"30\" height=\"30\" src=\"https://img.icons8.com/papercut/60/pdf.png\" alt=\"pdf\"/>", title: "baixar PDF"},
                     {extend: 'print', className: 'printButton' ,text: "<img width=\"30\" height=\"30\" src=\"https://img.icons8.com/ios-filled/50/print.png\" alt=\"print\"/>", title: "Imprimir", }
-                ]
+                ],
+
+
 
 
     });

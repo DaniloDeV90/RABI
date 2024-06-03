@@ -13,7 +13,7 @@
   --white-color: #F7F6FB;
   --body-font: 'Nunito', sans-serif;
   --normal-font-size: 1rem;
-  --z-fixed: 100;
+  --z-fixed: 999;
 }
 *,
 *::before,
@@ -27,6 +27,7 @@
     margin-top: 120px;
 
 }
+
 body {
   position: relative;
   margin: var(--header-height) 0 0 0;
@@ -36,3 +37,6 @@ body {
   transition: .5s;
 }
 
+.container_main {
+    margin-top: 190px;
+}

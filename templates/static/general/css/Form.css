@@ -1,0 +1,60 @@
+
+.FormNavDiv {
+
+    display: flex;
+    position: fixed; /* Torna a div fixa */
+    top: 50px; /* Distância do topo */
+    left: 100px; /* Alinhamento à esquerda */
+    width: 90vw; /* Largura da div */
+    transition: 0.5s;
+    display: flex;
+    justify-content: space-between;
+
+
+    padding: 20px; /* Espaçamento interno */
+    z-index: 998; /* Z-index para garantir que a div fique acima do conteúdo */
+}
+
+.menu1, .menu2 {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+
+}
+
+.returnBtn {
+    width: 30%;
+    border: 1px solid var(--dark--);
+    background-color: white;
+     padding: 7px;
+    color: var(--dark--);
+    display: flex;
+    align-items: center;
+    border-radius: 4px;
+    text-align: center; /* Alinhamento do texto */
+    text-decoration: none; /* Estilo do texto */
+justify-content: center;
+    cursor: pointer; /* Cursor */
+}
+
+.btnForm {
+    background-color: var(--dark--);
+    border-radius: 4px;
+
+    border: none; /* Remove a borda */
+    color: white; /* Cor do texto */
+    padding: 7px;
+    text-align: center; /* Alinhamento do texto */
+    text-decoration: none; /* Estilo do texto */
+    display: inline-block; /* Exibir como bloco */
+    cursor: pointer; /* Cursor */
+
+
+}
+
+@media (max-width: 767px) {
+    .FormNavDiv {
+        left: 0px;
+
+    }
+}

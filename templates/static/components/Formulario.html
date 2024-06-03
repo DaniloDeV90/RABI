@@ -1,0 +1,19 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'general/css/Form.css' %}">
+
+<form class="FormNav">
+    <div class="FormNavDiv">
+        <div class="menu1">
+            <h2>Cadastro de {{ name }}</h2>
+            <button class="returnBtn"> <i class='bx bx-arrow-back nav_icon'></i>VOLTAR</button>
+        </div>
+        
+        <div class="menu2">
+            <button class="btnForm">NOVO {{ name }}</button>
+            <button class="btnForm" > SALVAR</button>
+        </div>
+
+
+    </div>
+    {{ form.as_p }}
+</form>

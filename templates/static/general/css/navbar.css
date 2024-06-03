@@ -12,6 +12,7 @@ a_disabeld {
   width: 100%;
 
   position: fixed;
+
   top: 0;
   left: 0;
   display: flex;
@@ -81,7 +82,7 @@ a_disabeld {
   flex-direction: column;
   justify-content: space-between;
   overflow: hidden;
-
+   z-index: 200;
 
 }
 

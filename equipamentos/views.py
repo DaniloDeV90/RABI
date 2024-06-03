@@ -33,7 +33,7 @@ def criar_equipamento(request):
     html_nav = f"""
         <div class="nav_list">
             <a href="/equipamentos/criar/" class="nav_link active">
-             <i class='bx bx-cylinder' ></i> <span class="nav_name">Dados cadastrais</span> 
+             <i class='bx bx-cylinder nav_icon' ></i> <span class="nav_name">Dados cadastrais</span> 
             </a> 
             <a href="#" class="nav_link"> 
                <i class='bx bx-time  nav_icon'></i> <span class="nav_name">Grade Horária</span> 
