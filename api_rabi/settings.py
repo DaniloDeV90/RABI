@@ -41,6 +41,11 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django_tables2',
     "equipamentos",
+    "empresa",
+    "endereco",
+    "grupoEmpresarial",
+    "unidadeFederativa",
+    "local",
     "documentos"
 ]
 
@@ -78,13 +83,13 @@ WSGI_APPLICATION = 'api_rabi.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
-DATABASE = {
+DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'rabisystem',
-        'USER': 'root',
+        'USER': 'admin',
         'PASSWORD': 'admin123',
-        'HOST': '127.0.0.1',
+        'HOST': '127.0.0.1',  # Ou o IP do servidor MySQL
         'PORT': '3307',
     }
 }
