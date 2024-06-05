@@ -46,7 +46,9 @@ INSTALLED_APPS = [
     "grupoEmpresarial",
     "unidadeFederativa",
     "local",
-    "documentos"
+    "documentos",
+    "operadora",
+    "convenio"
 ]
 
 MIDDLEWARE = [
@@ -88,9 +90,9 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'rabisystem',
         'USER': 'admin',
-        'PASSWORD': 'admin123',
+        'PASSWORD': 'Vida011097jr.',
         'HOST': '127.0.0.1',  # Ou o IP do servidor MySQL
-        'PORT': '3307',
+        'PORT': '3306',
     }
 }
 pymysql.install_as_MySQLdb()
