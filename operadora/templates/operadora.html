@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% block body %}
+    <header>
+        <link rel="stylesheet" href=" {% static "operadora/operadora.css" %}">
+    </header>
+    {% include "static/components/Formulario.html" with cadastro="Cadastro de Operadora" novo="OPERADORA" %}
+{#  {% include 'static/components/tabela.html' %}#}
+{% endblock %}

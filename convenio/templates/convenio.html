@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% block body %}
+    <header>
+        <link rel="stylesheet" href=" {% static "convenio/convenio.css" %}">
+    </header>
+    {% include "static/components/Formulario.html" with cadastro="Cadastro de Convenio" novo="Convenio" %}
+    <div class="container">
+        <div class="card">
+             <div class="card-body">
+                <label for="formGroupExampleInput" class="form-label-convenio-form">Descricao</label>
+                <input type="text" class="form-control" id="formGroupExampleInput">
+            </div>
+             <div class="card-body">
+                <label for="formGroupExampleInput" class="form-label-convenio-form">Codigo</label>
+                <input type="text" class="form-control" id="formGroupExampleInput">
+            </div>
+             <div class="card-body">
+                <label for="formGroupExampleInput" class="form-label-convenio-form">Empresa Principal</label>
+                <input type="text" class="form-control" id="formGroupExampleInput">
+            </div>
+             <div class="card-body">
+                <label for="formGroupExampleInput" class="form-label-convenio-form">Operadora</label>
+                <input type="text" class="form-control" id="formGroupExampleInput">
+            </div>
+             <div class="card-body">
+                <label for="formGroupExampleInput" class="form-label-convenio-form">Data-Inicio</label>
+                <input type="text" class="form-control" id="formGroupExampleInput">
+            </div>
+             <div class="card-body">
+                <label for="formGroupExampleInput" class="form-label-convenio-form">Data-Fim</label>
+                <input type="text" class="form-control" id="formGroupExampleInput">
+            </div>
+             <div class="card-body">
+                <label for="formGroupExampleInput" class="form-label-convenio-form">Prazo de Reajuste</label>
+                <input type="text" class="form-control" id="formGroupExampleInput">
+            </div>
+             <div class="card-body">
+                <label for="formGroupExampleInput" class="form-label-convenio-form">Recurso de Glosa em (Dias)</label>
+                <input type="text" class="form-control" id="formGroupExampleInput">
+            </div>
+            <div class="card-body">
+                <label for="formGroupExampleInput" class="form-label-convenio-form">Prazo de Pagamentos em em (Dias)</label>
+                <input type="text" class="form-control" id="formGroupExampleInput">
+            </div>
+        </div>
+    </div>
+{% endblock %}
