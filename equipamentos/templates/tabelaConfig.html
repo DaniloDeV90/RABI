@@ -13,7 +13,7 @@
         <tr class="table table-light">
             <td> {{ data.nome }}</td>
             <td>{{ data.local }}</td>
-            <td>{% include "static/components/btnEdit.html" with urlEdit="equipamentos"  id=data.id %}{% include "static/components/btnExclusao.html" %}</td>
+            <td> <a href="{% url 'editar_equipamento' id=data.id %}">{% include "static/components/btnEdit.html" %}</a> {% include "static/components/btnExclusao.html" %}</td>
         </tr>
     {% endfor %}
 {% endblock %}
