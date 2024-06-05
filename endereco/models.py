@@ -16,3 +16,6 @@ class Endereco(models.Model):
     class Meta:
         managed = False
         db_table = 'endereco'
+
+    def __str__(self):
+        return f"{self.cep} - {self.endereco} ({self.numero})"

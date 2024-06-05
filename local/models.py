@@ -13,3 +13,6 @@ class Local(models.Model):
     class Meta:
         managed = False
         db_table = 'local'
+
+    def __str__(self):
+        return self.nome

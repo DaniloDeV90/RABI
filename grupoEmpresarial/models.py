@@ -20,3 +20,7 @@ class GrupoEmpresarial(models.Model):
     class Meta:
         managed = False
         db_table = 'grupo_empresarial'
+
+
+    def __str__(self):
+        return self.nome_fantasia

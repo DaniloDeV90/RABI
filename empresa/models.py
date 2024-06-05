@@ -23,3 +23,6 @@ class Empresa(models.Model):
     class Meta:
         managed = False
         db_table = 'empresa'
+
+    def __str__(self):
+        return self. nome_fantasia
