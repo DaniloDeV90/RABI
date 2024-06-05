@@ -1,0 +1,6 @@
+.colabForm {
+    display: inline-block;
+    border: 1px solid red;
+    width: 20rem;
+    margin-right: 20px;
+}

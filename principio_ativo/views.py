@@ -41,7 +41,7 @@ def criar_principio_ativo(request):
             form.save()
             print(nome_equipamento)
 
-        return  render(request, 'equipamentos.html',{'form': form,'table': table, "possuiSideBar": True, "html_content":html_nav, "possuiVoltar": False })
+        return  render(request, 'colaboradores.html',{'form': form,'table': table, "possuiSideBar": True, "html_content":html_nav, "possuiVoltar": False })
     else:
         form = EquipamentoForm()
-        return  render(request, 'equipamentos.html',{'form': form,'table': table,  "possuiSideBar": True, "html_content":html_nav, "possuiVoltar": False})
+        return  render(request, 'colaboradores.html',{'form': form,'table': table,  "possuiSideBar": True, "html_content":html_nav, "possuiVoltar": False})

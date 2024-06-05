@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django_tables2',
     "equipamentos",
+    "colaboradores",
     "empresa",
     "endereco",
     "grupoEmpresarial",
@@ -88,9 +89,9 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'rabisystem',
         'USER': 'admin',
-        'PASSWORD': 'admin123',
+        'PASSWORD': 'Wa20112016',
         'HOST': '127.0.0.1',  # Ou o IP do servidor MySQL
-        'PORT': '3307',
+        'PORT': '3306',
     }
 }
 pymysql.install_as_MySQLdb()
