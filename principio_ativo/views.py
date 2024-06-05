@@ -7,7 +7,7 @@ from django.shortcuts import render
 from .table import EquipamentoTable
 import json
 from django.shortcuts import render
-from equipamentos.form import EquipamentoForm
+from principio_ativo.form import principioAtivoForm
 from .models import PrincipioAtivo
 
 # Create your views here.
