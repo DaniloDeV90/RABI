@@ -8,4 +8,5 @@ urlpatterns = [
 
     path ("equipamentos/", include("equipamentos.urls")),
     path ("documentos/", include("documentos.urls")),
+    path("colaboradores/", include("colaboradores.urls"))
 ]
