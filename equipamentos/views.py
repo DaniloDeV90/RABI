@@ -53,3 +53,11 @@ def editar_equipamento(request, id):
     return render(request, 'equipamentos.html', {'form': form,"data":dataEquipamento,"method":"POST","colNames": colNames,  "possuiSideBar": True, "html_content":html_nav, "possuiVoltar": False, "nomeEpto":equipamento.nome })
 
 
+def deletar_equipamento(request, id):
+
+    equipamento = get_object_or_404(Equipamento, pk=id)
+    equipamento.delete()
+
+    return redirect(f'/equipamentos/criar')
+
+
