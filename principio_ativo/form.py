@@ -15,6 +15,6 @@ class PrincipioAtivoForm(forms.ModelForm):
 
     def clean_nome(self):
         nome = self.cleaned_data.get('nome')
-        if Equipamento.objects.filter(nome=nome).exists():
+        if PrincipioAtivo.objects.filter(nome=nome).exists():
             raise forms.ValidationError("O nome do principio ativo deve ser único.")
         return nome

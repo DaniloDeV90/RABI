@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% block body %}
+    <header>
+        <link rel="stylesheet" href=" {% static "principioAtivo/pricipioAtivo.css" %}">
+    </header>
+
+    {% include "static/components/Formulario.html" with cadastro="Cadastro do principio ativo" novo="PRINCIPIO ATIVO" method="POST" hrefNovo="portal-do-colaborador/principio_ativo/criar" %}
+  {% include 'tabelaPrincipioAtivo.html'  %}
+{% endblock %}
