@@ -5,6 +5,7 @@
     <header>
         <link rel="stylesheet" href=" {% static "equipamentos/equipamento.css" %}">
     </header>
-    {% include "static/components/Formulario.html" with cadastro="Cadastro de equipamento" novo="EQUIPAMENTO" %}
-  {% include 'static/components/tabela.html' %}
+
+    {% include "static/components/Formulario.html" with cadastro="Cadastro de equipamento" novo="EQUIPAMENTO" method="POST" hrefNovo="portal-do-colaborador/equipamentos/criar" %}
+  {% include 'tabelaConfig.html'  %}
 {% endblock %}

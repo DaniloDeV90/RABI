@@ -10,3 +10,6 @@ class UnidadeFederativa(models.Model):
     class Meta:
         managed = False
         db_table = 'unidade_federativa'
+
+    def __str__(self):
+        return self.unidade_federativa_id

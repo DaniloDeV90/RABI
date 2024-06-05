@@ -4,13 +4,15 @@ from .models import Equipamento
 
 
 class EquipamentoForm(forms.ModelForm):
+
     class Meta:
         model = Equipamento
         fields = ['nome', 'local']
+
         widgets = {
 
             'nome': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Nome do Equipamento'}),
-
+            'local': forms.Select(attrs={'class': 'form-control', 'value': 'Nome do Equipamento'}),
         }
 
     def clean_nome(self):

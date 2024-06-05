@@ -2,12 +2,15 @@ from django.shortcuts import render
 from django.http import HttpResponse
 
 from django.shortcuts import render
+from .models import Equipamento
 
 import json
 from django.shortcuts import render
 from equipamentos.form import EquipamentoForm
-def criar_equipamento(request):
 
+def criar_equipamento(request):
+    dataEquipamento = Equipamento.objects.all()
+    colNames = ["Nome", "Local", "Ação"]
     html_nav = f"""
         <div class="nav_list">
             <a href="/equipamentos/criar/" class="nav_link active">
@@ -24,11 +27,14 @@ def criar_equipamento(request):
         form = EquipamentoForm(request.POST)
 
         if form.is_valid():
+            print("d")
+            print (form)
             nome_equipamento = form.cleaned_data['nome']
             form.save()
             print(nome_equipamento)
 
-        return  render(request, 'equipamentos.html',{'form': form, "possuiSideBar": True, "html_content":html_nav, "possuiVoltar": False })
+        return  render(request, 'equipamentos.html',{'form': form, "data":dataEquipamento,"colNames": colNames, "possuiSideBar": True, "html_content":html_nav, "possuiVoltar": False })
     else:
-        form = EquipamentoForm()
-        return  render(request, 'equipamentos.html',{'form': form,  "possuiSideBar": True, "html_content":html_nav, "possuiVoltar": False})
+
+        form = EquipamentoForm(initial={"ativo": 1})
+        return  render(request, 'equipamentos.html',{'form': form,"data":dataEquipamento,"colNames": colNames,  "possuiSideBar": True, "html_content":html_nav, "possuiVoltar": False})

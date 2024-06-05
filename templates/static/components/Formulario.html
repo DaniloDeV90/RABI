@@ -1,21 +1,23 @@
 {% load static %}
 <link rel="stylesheet" href="{% static 'general/css/Form.css' %}">
 
-<form class="FormNav">
+<form class="FormNav" method={{ method }} >
     <div class="FormNavDiv">
         <div class="menu1">
-            <h2>{{ cadastro }}</h2>
+            <h3>{{ cadastro }}</h3>
             {% if possuiVoltar %}
             <button class="returnBtn"> <i class='bx bx-arrow-back nav_icon'></i>VOLTAR</button>
             {% endif %}
         </div>
         
         <div class="menu2">
-            <button class="btnForm ">NOVO {{ novo }} <i class='bx bx-plus nav_icon'></i></button>
-            <button class="btnForm" > SALVAR <i class='bx bx-check nav_icon' ></i></button>
+           <a href={{ hrefNovo }}><button class="btnForm " type="button">NOVO {{ novo }} <i class='bx bx-plus nav_icon'></i></button></a>
+            <button class="btnForm" type="submit" > SALVAR <i class='bx bx-check nav_icon' ></i></button>
         </div>
 
 
     </div>
+   {% csrf_token %}
     {{ form.as_p }}
+
 </form>

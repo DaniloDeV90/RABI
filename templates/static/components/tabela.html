@@ -1,119 +1,35 @@
-
 {% load static %}
-  <table id="example" class="table" style="width:100%">
+<style>
+    .acoes {
 
-        <thead>
-        <tr class="table table-secondary">
-            <th>Name</th>
-            <th>Position</th>
-            <th>Office</th>
+        cursor: pointer;
+         margin: 5px;
+    }
 
-        </tr>
-        </thead>
-        <tbody>
-        <tr class="table table-light">
-            <td>rOFER</td>
-            <td>System Architect</td>
-            <td>nenhum</td>
+</style>
+<table id="example" class="table" style="width:100%">
+    <thead>
+    <tr class="table table-secondary">
 
-        </tr>
-        <tr>
-            <td>Garrett Winters</td>
-            <td>Accountant</td>
-            <td>Tokyo</td>
+        {% block colNamesTop %}
 
-        </tr>
-        <tr>
-            <td>Ashton Cox</td>
-            <td>Junior Technical Author</td>
-            <td>San Francisco</td>
+        {% endblock %}
+    </tr>
+    </thead>
+    <tbody>
 
-        </tr>
-        <tr>
-            <td>Cedric Kelly</td>
-            <td>Senior Javascript Developer</td>
-            <td>Edinburgh</td>
 
-        </tr>
-      <tr>
-            <td>Cedric Kelly</td>
-            <td>Senior Javascript Developer</td>
-            <td>Edinburgh</td>
+        {% block colDatas %}
 
-        </tr>
-              <tr>
-            <td>Cedric Kelly</td>
-            <td>Senior Javascript Developer</td>
-            <td>Edinburgh</td>
+        {% endblock %}
 
-        </tr>
-              <tr>
-            <td>Cedric Kelly</td>
-            <td>Senior Javascript Developer</td>
-            <td>Edinburgh</td>
+    </tbody>
+    <tfoot>
+    <tr>
+        {% block colNamesBottom %}
 
-        </tr>
-              <tr>
-            <td>Cedric Kelly</td>
-            <td>Senior Javascript Developer</td>
-            <td>Edinburgh</td>
+        {% endblock %}
 
-        </tr>
-              <tr>
-            <td>Cedric Kelly</td>
-            <td>Senior Javascript Developer</td>
-            <td>Edinburgh</td>
-
-        </tr>
-              <tr>
-            <td>Cedric Kelly</td>
-            <td>Senior Javascript Developer</td>
-            <td>Edinburgh</td>
-
-        </tr>
-              <tr>
-            <td>Cedric Kelly</td>
-            <td>Senior Javascript Developer</td>
-            <td>Edinburgh</td>
-
-        </tr>
-              <tr>
-            <td>Cedric Kelly</td>
-            <td>Senior Javascript Developer</td>
-            <td>Edinburgh</td>
-
-        </tr>
-              <tr>
-            <td>Cedric Kelly</td>
-            <td>Senior Javascript Developer</td>
-            <td>Edinburgh</td>
-
-        </tr>
-              <tr>
-            <td>Cedric Kelly</td>
-            <td>Senior Javascript Developer</td>
-            <td>Edinburgh</td>
-
-        </tr>
-              <tr>
-            <td>Cedric Kelly</td>
-            <td>Senior Javascript Developer</td>
-            <td>Edinburgh</td>
-
-        </tr>
-              <tr>
-            <td>Cedric Kelly</td>
-            <td>Senior Javascript Developer</td>
-            <td>Edinburgh</td>
-
-        </tr>
-        </tbody>
-        <tfoot>
-        <tr>
-            <th>Name</th>
-            <th>Position</th>
-            <th>Office</th>
-
-        </tr>
-        </tfoot>
-    </table>
+    </tr>
+    </tfoot>
+</table>

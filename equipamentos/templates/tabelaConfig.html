@@ -1,3 +1,25 @@
 {% extends "static/components/tabela.html" %}
 {% load static %}
 
+
+{% block colNamesTop %}
+    {% for colNames in colNames %}
+        <th>{{ colNames }}</th>
+    {% endfor %}
+
+{% endblock %}
+{% block colDatas %}
+    {% for data in data %}
+        <tr class="table table-light">
+            <td> {{ data.nome }}</td>
+            <td>{{ data.local }}</td>
+            <td>{% include "static/components/btnEdit.html" with urlEdit="equipamentos"  id=data.id %}{% include "static/components/btnExclusao.html" %}</td>
+        </tr>
+    {% endfor %}
+{% endblock %}
+{% block colNamesBottom %}
+    {% for colNames in colNames %}
+        <th>{{ colNames }}</th>
+    {% endfor %}
+
+{% endblock %}
