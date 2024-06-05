@@ -4,7 +4,7 @@
 <form class="FormNav" method={{ method }} >
     <div class="FormNavDiv">
         <div class="menu1">
-            <h3>{{ cadastro }}</h3>
+            <h3>{{ cadastro }} {{ nomeEqpto }}</h3>
             {% if possuiVoltar %}
             <button class="returnBtn"> <i class='bx bx-arrow-back nav_icon'></i>VOLTAR</button>
             {% endif %}
@@ -18,6 +18,8 @@
 
     </div>
    {% csrf_token %}
+
+
     {{ form.as_p }}
 
 </form>

@@ -40,3 +40,9 @@ body {
 .container_main {
     margin-top: 190px;
 }
+
+.testeLinha {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}

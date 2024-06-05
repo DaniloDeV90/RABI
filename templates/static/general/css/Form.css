@@ -1,14 +1,14 @@
 
 .FormNavDiv {
 
-    display: flex;
 
-    height: 100px;
+
+    height: 1px;
     background-color: #FFFFFF;
     position: fixed; /* Torna a div fixa */
     top: 50px; /* Distância do topo */
     left: 100px; /* Alinhamento à esquerda */
-    width: 90vw; /* Largura da div */
+    width: 80vw; /* Largura da div */
     transition: 0.5s;
     display: flex;
     justify-content: space-between;
