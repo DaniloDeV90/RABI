@@ -16,5 +16,5 @@ class Equipamento(models.Model):
         db_table = 'equipamento'
 
     def __str__(self):
-        return f"{self.nome} - {self.local}"
+        return f"{self.nome} - {self.local} - {self.id}"
 

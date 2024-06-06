@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% block body %}
+    <header>
+        <link rel="stylesheet" href=" {% static "colaboradores/colaboradores.css" %}">
+    </header>
+    {% include "static/components/Formulario.html" with cadastro="Cadastro de Colaborador" novo="COLABORADOR" %}
+  {% include 'static/components/tabela.html' %}
+{% endblock %}
