@@ -18,7 +18,7 @@
                    {% include "static/components/btnExclusao.html" %}
                 </a>
             </td>
-            {% include 'static/components/modal/modal.html' with nomeModal="staticBackdrop" urlString="deletar_equipamento"  id=data.id modalTextBody="Deseja apaagr o equipamento" equipamentoNome=data.nome  %}
+            {% include 'static/components/modal/modal.html' with nomeModal="staticBackdrop" urlString="deletar_equipamento"  id=data.id modalTextBody="Deseja apagar o equipamento" equipamentoNome=data.nome  modalTitle="ATENÇÃO!" %}
         </tr>
     {% endfor %}
 {% endblock %}
