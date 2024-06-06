@@ -15,7 +15,7 @@
 
 
     padding: 20px; /* Espaçamento interno */
-    z-index: 998; /* Z-index para garantir que a div fique acima do conteúdo */
+    z-index: 990; /* Z-index para garantir que a div fique acima do conteúdo */
 }
 
 .menu1, .menu2 {

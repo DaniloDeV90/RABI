@@ -9,7 +9,7 @@
             <button class="returnBtn"> <i class='bx bx-arrow-back nav_icon'></i>VOLTAR</button>
             {% endif %}
         </div>
-        
+
         <div class="menu2">
            <a href={{ hrefNovo }}><button class="btnForm " type="button">NOVO {{ novo }} <i class='bx bx-plus nav_icon'></i></button></a>
             <button class="btnForm" type="submit" > SALVAR <i class='bx bx-check nav_icon' ></i></button>
@@ -18,6 +18,7 @@
 
     </div>
    {% csrf_token %}
+
 
 
     {{ form.as_p }}

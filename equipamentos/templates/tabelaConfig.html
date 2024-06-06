@@ -13,14 +13,21 @@
         <tr class="table table-light">
             <td> {{ data.nome }}</td>
             <td>{{ data.local }}</td>
-            <td> <a href="{% url 'editar_equipamento' id=data.id %}">{% include "static/components/btnEdit.html" %}</a>
-                <a href="{% url 'deletar_equipamento' id=data.id %}">   {% include "static/components/btnExclusao.html" %} </a></td>
+            <td><a href="{% url 'editar_equipamento' id=data.id %}">{% include "static/components/btnEdit.html" %}</a>
+                <a   data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                   {% include "static/components/btnExclusao.html" %}
+                </a>
+            </td>
+            {% include 'static/components/modal/modal.html' with nomeModal="staticBackdrop" urlString="deletar_equipamento"  id=data.id modalTextBody="Deseja apaagr o equipamento" equipamentoNome=data.nome  %}
         </tr>
     {% endfor %}
 {% endblock %}
+
 {% block colNamesBottom %}
     {% for colNames in colNames %}
         <th>{{ colNames }}</th>
     {% endfor %}
 
+
+    <script src="{% static "js/tableConfig.js" %}"></script>
 {% endblock %}
